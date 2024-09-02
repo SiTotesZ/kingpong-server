@@ -1,0 +1,1 @@
+DATABASE_URL=mongodb+srv://sitotes:sitotes01@dbwacluster.d5awtyl.mongodb.net/RestApi?retryWrites=true&w=majority
