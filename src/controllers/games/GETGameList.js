@@ -5,9 +5,8 @@ const shrortSch = require("../../models/game");
 
 async function getShrortUrl(req, res) {
   try {
-    const { tournamentCode } = req.query;
-    const games = await shrortSch.find({ tournamentCode: tournamentCode });
-    return res.send(games);
+    const games = await shrortSch.find();
+    return res.json(games)
   } catch (err) {
     return res
       .status(500)
