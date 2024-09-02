@@ -2,15 +2,11 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
-const gameSchema = new Schema({
-  playerOneName: String,
-  playerTwoName: String,
-  playerOneScore: Number,
-  playerTwoScore: Number,
-  gameDate: String,
-  tournamentCode: String,
+const shrortSch = new Schema({
+  url: String,
+  id: String,
 });
 
-const Game = mongoose.model("Game", gameSchema);
+const shrortSch = mongoose.model("shorturl", shrortSch);
 
-module.exports = Game;
+module.exports = shrortSch;
