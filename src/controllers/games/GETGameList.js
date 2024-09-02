@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_URL);
-const Game = require("../../models/game");
+const shrortSch = require("../../models/game");
 // Function to GET inventory list
 
-async function getGameList(req, res) {
+async function getShrortUrl(req, res) {
   try {
     const { tournamentCode } = req.query;
-    const games = await Game.find({ tournamentCode: tournamentCode });
+    const games = await shrortSch.find({ tournamentCode: tournamentCode });
     return res.send(games);
   } catch (err) {
     return res
@@ -15,4 +15,4 @@ async function getGameList(req, res) {
   }
 }
 
-module.exports = getGameList;
+module.exports = getShrortUrl;
