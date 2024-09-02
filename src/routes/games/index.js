@@ -1,8 +1,8 @@
 const gamesRouter = require("express").Router();
 
-const getGameList = require("../../controllers/games/GETShortList");
+const getShrortUrl = require("../../controllers/games/GETShortList");
 
 
-gamesRouter.route("/games").get(getGameList)
+gamesRouter.route("/games").get(getShrortUrl)
 
 module.exports = gamesRouter;
